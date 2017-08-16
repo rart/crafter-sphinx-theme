@@ -1,0 +1,52 @@
+.rst-content {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Baloo Bhai', cursive;
+    .headerlink {
+      font-size: 1rem;
+      visibility: hidden;
+      display: inline-block;
+      margin-left: 5px;
+    }
+    &:hover {
+      .headerlink {
+        visibility: visible;
+      }
+    }
+  }
+
+  .admonition-title,
+  h1 .headerlink,
+  h2 .headerlink,
+  h3 .headerlink,
+  h4 .headerlink,
+  h5 .headerlink,
+  h6 .headerlink,
+  dl dt .headerlink,
+  p.caption .headerlink,
+  tt.download span:first-child,
+  code.download span:first-child,
+  .icon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .section>img,
+  .section>a>img {
+    margin-bottom: 2rem;
+  }
+
+  .align-center {
+    margin: auto;
+    display: block;
+  }
+
+}

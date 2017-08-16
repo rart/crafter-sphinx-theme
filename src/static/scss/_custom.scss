@@ -1,0 +1,141 @@
+@import "settings";
+
+#header {
+
+}
+
+#main {
+
+}
+
+#content {
+  padding: 2rem 1rem;
+  @media (min-width: 640px) {
+    margin: 0 auto;
+    max-width: 900px;
+    padding-left: $sidebar-sm + 20;
+  }
+  @media (min-width: 1000px) {
+    padding-left: $sidebar-lg;
+  }
+  @media (min-width: 1300px) {
+    max-width: 1200px;
+  }
+}
+
+#footer {
+
+}
+
+.title-bar {
+  .logo {
+    left: 50%;
+    width: 60px;
+    position: absolute;
+    margin-left: -30px;
+  }
+}
+
+.top-bar {
+  .logo {
+    padding: 0;
+    img {
+      width: 100px;
+    }
+  }
+  .menu li > a {
+    font-weight: 500;
+  }
+  a,
+  .menu-text,
+  .menu-text a {
+    color: $white;
+  }
+  @media (max-width: 639px) {
+    .top-bar-left {
+      display: none;
+    }
+    .menu {
+
+    }
+  }
+}
+
+.table-of-contents {
+  background: $custom-gray;
+  @media (max-width: 639px) {
+    margin: 1rem 1rem 0;
+    height: auto !important;
+  }
+  @media (min-width: 640px) {
+    float: left;
+    width: $sidebar-sm;
+  }
+  @media (min-width: 1000px) {
+    width: $sidebar-lg;
+  }
+  [data-sticky] {
+    padding-bottom: 1rem;
+    background: $custom-gray;
+    &.is-stuck {
+      overflow-y: auto;
+      @media (min-width: 640px) {
+        height: 100%;
+      }
+    }
+  }
+  header {
+    background: $custom-red;
+    .logo {
+      width: 150px;
+      margin: auto;
+      padding: 1rem;
+      display: block;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .mb-title {
+    font-size: 1.2rem;
+    color: $dark-gray;
+    padding: .5rem 1.25rem;
+    .menu-icon {
+      color: $custom-red;
+    }
+  }
+  .search {
+    padding: 1rem;
+    input {
+      margin: 0;
+      padding-left: 20px;
+      border-radius: 50px;
+      padding-right: 20px;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  #toc > ul {
+    margin-right: 1rem;
+    > li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.hamburger {
+  margin-top: 5px;
+  @include hamburger();
+}
+
+.breadcrumbs-container {
+  .primary {
+    flex-grow: 1;
+  }
+  .extra {
+    li {
+      text-transform: none;
+    }
+  }
+}
