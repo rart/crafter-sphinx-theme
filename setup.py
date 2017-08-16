@@ -10,9 +10,9 @@ from setuptools import setup
 
 setup(
     name='craftercms_sphinx_theme',
-    description='CrafterCMS Theme for Sphinx',
+    description='CrafterCMS Docs theme for Sphinx',
     version='1.0.0a1',
-    url='https://github.com/craftercms/sphinx-theme/',
+    url='https://github.com/rart/craftercms-sphinx-theme/',
     license='MIT',
     author='Roy Art',
     author_email='royart@me.com',
