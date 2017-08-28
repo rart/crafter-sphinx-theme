@@ -35,8 +35,13 @@ function loadConfig() {
 gulp.task('build:custom',
  gulp.series(clean, gulp.parallel(sphinx, sass, javascript, images, copy), rmDistSCSS));
 
-gulp.task('build',
-    gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), rmDistSCSS, styleGuide));
+gulp.task('build:update-css', sass);
+
+gulp.task('build', gulp.series(
+  clean,
+  gulp.parallel(pages, sass, javascript, images, copy),
+  rmDistSCSS,
+  styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
