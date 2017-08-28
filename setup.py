@@ -11,7 +11,7 @@ from setuptools import setup
 setup(
     name='craftercms_sphinx_theme',
     description='CrafterCMS Docs theme for Sphinx',
-    version='1.1.0a1',
+    version='1.1.2a1',
     url='https://github.com/rart/craftercms-sphinx-theme/',
     license='MIT',
     author='Roy Art',
@@ -19,14 +19,16 @@ setup(
     long_description=open('README.rst', encoding='utf-8').read(),
     zip_safe=False,
     packages=['craftercms_sphinx_theme'],
-    package_data={'craftercms_sphinx_theme': [
+    package_data={
+      'craftercms_sphinx_theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
         'static/js/*.js',
-        'static/font/*.*'
+        'static/font/*.*',
         'static/img/*.*'
-    ]},
+      ]
+    },
     include_package_data=True,
     # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
     entry_points = {
