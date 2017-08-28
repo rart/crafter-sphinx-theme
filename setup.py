@@ -11,7 +11,7 @@ from setuptools import setup
 setup(
     name='craftercms_sphinx_theme',
     description='CrafterCMS Docs theme for Sphinx',
-    version='1.1.2a1',
+    version='1.1.3a1',
     url='https://github.com/rart/craftercms-sphinx-theme/',
     license='MIT',
     author='Roy Art',
