@@ -1,7 +1,11 @@
 @import "settings";
 
 #header {
-
+  .no-topbar & {
+    .menu-icon {
+      visibility: hidden;
+    }
+  }
 }
 
 #main {
@@ -59,6 +63,10 @@
 
     }
   }
+  .no-topbar & {
+    display: none !important;
+  }
+;
 }
 
 .table-of-contents {
@@ -116,11 +124,26 @@
   ul {
     list-style: none;
   }
-  #toc > ul {
+}
+
+#toc {
+  > header {
+    display: none;
+    .no-topbar & {
+      display: block;
+      @media (max-width: 639px) {
+        display: none;
+      }
+    }
+  }
+  > ul {
     margin-right: 1rem;
     > li {
       margin-bottom: 5px;
     }
+  }
+  li.current > a {
+    color: #555;
   }
 }
 
@@ -139,3 +162,5 @@
     }
   }
 }
+
+
